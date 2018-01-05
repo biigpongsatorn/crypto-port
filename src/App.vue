@@ -19,7 +19,9 @@
           Hello
         </div>
         <div class="stretch">
-
+          <div style="height: 1000px;background-color: red;">
+            World
+          </div>
         </div>
       </div>
     </div>
@@ -63,8 +65,7 @@ export default {
 .app--router-view-container {
   float: left;
   width: calc(100% - 200px);
-  background-color: yellow;
-  height: calc(100% - 60px - 60px);
+  height: calc(100vh - 60px);
   overflow: auto;
 }
 .app--top-bar-container {
