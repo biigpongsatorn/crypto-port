@@ -4,6 +4,7 @@ import Dashboard from '@/pages/Dashboard'
 import Balance from '@/pages/Balance'
 import Portfolio from '@/pages/Portfolio'
 import SupportUs from '@/pages/SupportUs'
+import HallofFrame from '@/pages/HallofFrame'
 import Settings from '@/pages/Settings'
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/support-us',
       name: 'SupportUs',
       component: SupportUs
+    },
+    {
+      path: '/hall-of-frame',
+      name: 'HallofFrame',
+      component: HallofFrame
     },
     {
       path: '/settings',

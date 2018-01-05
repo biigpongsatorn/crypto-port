@@ -37,6 +37,15 @@
     </div>
 
     <div class="side-menu--li"
+    :class="{'side-menu--li-active': currentRoute === 'HallofFrame'}"
+    @click="changeTab('HallofFrame')">
+      <span class="icon has-text-warning">
+        <i class="fa fa-trophy"></i>
+      </span>
+      Hall of Fame
+    </div>
+
+    <div class="side-menu--li-last"
     :class="{'side-menu--li-active': currentRoute === 'Settings'}"
     @click="changeTab('Settings')">
       <span class="icon">
@@ -44,6 +53,7 @@
       </span>
       Settings
     </div>
+
   </div>
 </template>
 
@@ -70,19 +80,33 @@ export default {
 .side-menu--container {
   padding-top: 1px;
   height: calc(100vh - 60px);
+  position: relative;
 }
 .side-menu--li {
   color: #fff;
   height: 50px;
-  padding: 16px;
+  padding: 12px 16px;
 }
 .side-menu--li:hover {
+  cursor: pointer;
+  background-color: #151524;
+}
+.side-menu--li-last {
+  color: #fff;
+  height: 50px;
+  padding: 12px 16px;
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+}
+.side-menu--li-last:hover {
   cursor: pointer;
   background-color: #151524;
 }
 .side-menu--li-active {
   background-color: #151524;
   border-left: 5px solid #ffb946;
+  padding: 12px 11px;
 }
 </style>
 
