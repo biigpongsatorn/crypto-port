@@ -65,6 +65,7 @@ export default {
   width: calc(100% - 200px);
   height: calc(100vh - 60px);
   overflow: auto;
+  background-color: #f4f4f4;
 }
 .app--top-bar-container {
   float: left;
