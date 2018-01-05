@@ -1,8 +1,7 @@
 <template>
   <div class="stretch" id="app">
-    <!-- <router-view/> -->
     <div class="stretch app--header-container">
-      <div class="app--header-nav-logo">
+      <div class="app--header-nav-logo" @click="$router.push({ name: 'Dashboard' })">
         CryptoPher
       </div>
       <div class="app--header-nav-bar">
@@ -11,26 +10,24 @@
     </div>
     <div class="stretch">
       <div class="app--side-menu-container">
-
+        <!-- Side Menu -->
+        <SideMenu/>
       </div>
       <div class="app--router-view-container">
-        <!--  router-view -->
-        <div class="app--top-bar-container">
-          Hello
-        </div>
-        <div class="stretch">
-          <div style="height: 1000px;background-color: red;">
-            World
-          </div>
-        </div>
+        <!-- Router view -->
+        <router-view/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import SideMenu from '@/components/SideMenu'
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    SideMenu
+  }
 }
 </script>
 
@@ -50,6 +47,7 @@ export default {
   font-size: 21px;
   font-weight: bold;
   padding: 14px;
+  cursor: pointer;
 }
 .app--header-nav-bar {
   float: right;
@@ -59,7 +57,6 @@ export default {
 .app--side-menu-container {
   float: left;
   width: 200px;
-  height: calc(100vh - 60px);
   background-color: #242536;
 }
 .app--router-view-container {

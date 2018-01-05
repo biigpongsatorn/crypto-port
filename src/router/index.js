@@ -1,15 +1,38 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-
+import Dashboard from '@/pages/Dashboard'
+import Balance from '@/pages/Balance'
+import Portfolio from '@/pages/Portfolio'
+import SupportUs from '@/pages/SupportUs'
+import Settings from '@/pages/Settings'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'Dashboard',
+      component: Dashboard
+    },
+    {
+      path: '/balance',
+      name: 'Balance',
+      component: Balance
+    },
+    {
+      path: '/portfolio',
+      name: 'Portfolio',
+      component: Portfolio
+    },
+    {
+      path: '/support-us',
+      name: 'SupportUs',
+      component: SupportUs
+    },
+    {
+      path: '/settings',
+      name: 'Settings',
+      component: Settings
     }
   ]
 })
