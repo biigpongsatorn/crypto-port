@@ -5,16 +5,14 @@
         CryptoPher
       </div>
       <div class="app--header-nav-bar">
-        <!-- component user nav bar -->
+        <User/>
       </div>
     </div>
     <div class="stretch">
       <div class="app--side-menu-container">
-        <!-- Side Menu -->
         <SideMenu/>
       </div>
       <div class="app--router-view-container">
-        <!-- Router view -->
         <router-view/>
       </div>
     </div>
@@ -23,10 +21,12 @@
 
 <script>
 import SideMenu from '@/components/SideMenu'
+import User from '@/components/User'
 export default {
   name: 'app',
   components: {
-    SideMenu
+    SideMenu,
+    User
   }
 }
 </script>
@@ -50,9 +50,10 @@ export default {
   cursor: pointer;
 }
 .app--header-nav-bar {
-  float: right;
+  float: left;
   width: calc(100% - 200px);
   background-color: #242536;
+  height: 60px;
 }
 .app--side-menu-container {
   float: left;
