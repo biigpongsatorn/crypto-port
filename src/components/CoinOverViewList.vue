@@ -1,4 +1,5 @@
 <template>
+  <!-- // Maximun coin : 7 -->
   <div class="coin-overview--container">
     <div class="coin-overview--li-box">
       <img class="coin-overview--coin-img" src="https://files.coinmarketcap.com/static/img/coins/32x32/bitcoin.png">
