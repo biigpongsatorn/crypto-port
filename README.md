@@ -1,4 +1,4 @@
-# crypto-port
+# CryptoPher
 
 > Web application for cryptocurrency port build with Vue js & Firebase.
 
